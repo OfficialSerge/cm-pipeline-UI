@@ -1,0 +1,51 @@
+{
+  "key": "cm-pipeline-key",
+  "isLoggedIn": false,
+  "form": [
+    {
+      "title": "User",
+      "fields": [
+        {
+          "label": "Name",
+          "value": "",
+          "error": null
+        },
+        {
+          "label": "Title",
+          "value": "",
+          "error": null
+        },
+        {
+          "label": "File Upload",
+          "value": "",
+          "error": null
+        },
+        {
+          "label": "Output Directory",
+          "value": "",
+          "error": null
+        },
+        {
+          "label": "Algorithm",
+          "value": "LeidenCPM",
+          "error": null
+        }
+      ]
+    },
+    {
+      "title": "Algorithm",
+      "fields": [
+        {
+          "label": "Resolution",
+          "value": 1,
+          "error": null
+        },
+        {
+          "label": "Iterations",
+          "value": 2,
+          "error": null
+        }
+      ]
+    }
+  ]
+}
