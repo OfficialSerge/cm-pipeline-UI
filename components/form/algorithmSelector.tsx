@@ -17,10 +17,11 @@ export default function AlgorithmSelector() {
       className='relative rounded bg-slate-50 p-2 
           hover:cursor-pointer group/algo' // maybe use javascript idk
     >
-      {state.form}
+      <input type='hidden' value={state.algorithm.value} name='algorithm' />
+      {state.algorithm.value}
       <div
         className='absolute top-11 left-0 w-full invisible flex flex-col
-            group-hover/algo:visible'
+            group-hover/algo:visible divide-y'
       >
         {algorithms.map((algorithm) => (
           <SelectorRow stringPayload={algorithm} />

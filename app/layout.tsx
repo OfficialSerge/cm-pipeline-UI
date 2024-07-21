@@ -1,6 +1,5 @@
 import './globals.css'
 import NextAppProviders from './providers'
-import Aside from '@/components/aside'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -15,11 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='w-full h-[100vh] bg-slate-100'>
-        <NextAppProviders>
-          <Aside />
-          {children}
-        </NextAppProviders>
+      <body className='w-[100vw] h-[100vh] bg-gradient-to-b from-blue-300 to-slate-100'>
+        <NextAppProviders>{children}</NextAppProviders>
       </body>
     </html>
   )

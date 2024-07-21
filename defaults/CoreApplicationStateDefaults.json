@@ -1,48 +1,66 @@
 {
   "key": "cm-pipeline-key",
   "isLoggedIn": false,
+  "algorithm": {
+    "label": "Algorithm",
+    "value": "LeidenCPM",
+    "error": null
+  },
   "form": [
     {
-      "title": "User",
+      "title": "User Data",
       "fields": [
         {
           "label": "Name",
+          "name": "name",
+          "type": "string",
           "value": "",
           "error": null
         },
         {
           "label": "Title",
-          "value": "",
-          "error": null
-        },
-        {
-          "label": "File Upload",
+          "name": "title",
+          "type": "string",
           "value": "",
           "error": null
         },
         {
           "label": "Output Directory",
+          "name": "output directory",
+          "type": "string",
           "value": "",
           "error": null
         },
         {
-          "label": "Algorithm",
-          "value": "LeidenCPM",
+          "label": "Input Directory",
+          "name": "input directory",
+          "type": "string",
+          "value": "",
           "error": null
         }
       ]
     },
     {
-      "title": "Algorithm",
+      "title": "Algorithm Parameters",
       "fields": [
         {
           "label": "Resolution",
-          "value": 1,
+          "name": "resolution",
+          "type": "number",
+          "min": 0.001,
+          "max": 10,
+          "step": 0.001,
+          "value": 0.01,
           "error": null
         },
         {
-          "label": "Iterations",
-          "value": 2,
+          "label": "K Core Value",
+          "name": "k core value",
+          "type": "number",
+          "min": 0.001,
+          "max": 10,
+          "step": 0.001,
+          "value": 1,
           "error": null
         }
       ]

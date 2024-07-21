@@ -1,37 +1,39 @@
-type NumberParameter = {
+type NumberField = {
   readonly label: string
+  readonly type: string
+  readonly name: string
+  min: number
+  max: number
+  step: number
   value: number
   error: string | null
 }
 
-type StringParameter = {
+type StringField = {
   readonly label: string
+  readonly type: string
+  readonly name: string
   value: string
   error: string | null
 }
 
+type Field = StringField | NumberField
+
 type FormSection = {
   title: string
-  fields: (StringParameter | NumberParameter)[]
+  fields: Feild[]
 }
 
 interface CoreApplicationState {
   key: string // for session storage
   isLoggedIn: boolean
+  algorithm: StringField
   form: FormSection[]
 }
 
 interface CoreApplicationActions {
   stringPayload?: string
-  numberPayload?: number
   sectionID?: number
   fieldID?: number
-  type:
-    | 'stringFieldChange'
-    | 'numberFieldChange'
-    | 'nameChange'
-    | 'algorithmChange'
-    | 'resolutionChange'
-    | 'iterationChange'
-    | 'kCoreChange'
+  type: 'stringFieldChange' | 'numberFieldChange' | 'algorithmChange'
 }

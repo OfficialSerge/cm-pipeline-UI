@@ -1,6 +1,7 @@
 {
   "name": "cm-pipeline",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,10 +10,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.4",
+    "next": "^15.0.0-canary.74",
     "next-auth": "^5.0.0-beta.19",
-    "react": "^18",
-    "react-dom": "^18"
+    "react": "^19.0.0-rc-512b09b2-20240718",
+    "react-dom": "^19.0.0-rc-512b09b2-20240718",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",
