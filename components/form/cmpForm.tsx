@@ -41,13 +41,16 @@ function FormField(props: {
 export default function CMPForm() {
   const state = useContext(AppStateContext)!
   const [formState, formAction] = useActionState(RevalidateTest, {
+    algo_name: '',
+    params: {
+      res: '',
+      k: '',
+      i: '',
+    },
+    file_path: '',
     title: '',
     name: '',
-    input_file: '',
     output_dir: '',
-    algorithm: '',
-    resolution: '',
-    kCoreValue: '',
     message: '',
   })
 

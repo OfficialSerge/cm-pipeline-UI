@@ -7,13 +7,19 @@ function timeout() {
 
 export async function RevalidateTest(prevState: any, formData: FormData) {
   const data = {
+    // main arguments
+    algo_name: formData.get('algorithm') as string,
+    params: {
+      res: formData.get('resolution') as string,
+      k: formData.get('k core value') as string,
+      i: formData.get('iterations') as string,
+    },
+    file_path: formData.get('input directory') as string,
+
+    // extra arguments
     title: formData.get('title') as string,
     name: formData.get('name') as string,
-    input_file: formData.get('input directory') as string,
     output_dir: formData.get('output directory') as string,
-    algorithm: formData.get('algorithm') as string,
-    resolution: formData.get('resolution') as string,
-    kCoreValue: formData.get('k core value') as string,
     message: 'success',
   }
 
