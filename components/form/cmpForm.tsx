@@ -15,9 +15,17 @@ function FormSection(props: { section: FormSection; sectionID: number }) {
   return (
     <>
       <h2 className='font-bold'>{section.title}</h2>
-      {section.fields.map((field, fieldID) => (
-        <FormField field={field} sectionID={sectionID} fieldID={fieldID} />
-      ))}
+      {section.fields.map((field, fieldID) => {
+        const { label } = field
+        return (
+          <FormField
+            field={field}
+            sectionID={sectionID}
+            fieldID={fieldID}
+            key={label}
+          />
+        )
+      })}
     </>
   )
 }
@@ -55,7 +63,7 @@ export default function CMPForm() {
   })
 
   return (
-    <div className='flex gap-5 lg:gap-20'>
+    <div className='max-w-screen-sm mx-auto flex gap-5 lg:gap-24'>
       <form
         className='flex flex-col gap-5 w-full max-w-80 group'
         action={formAction}
@@ -63,9 +71,12 @@ export default function CMPForm() {
         <h2 className='font-bold'>Algorithm</h2>
         <AlgorithmSelector />
 
-        {state.form.map((section, sectionID) => (
-          <FormSection section={section} sectionID={sectionID} />
-        ))}
+        {state.form.map((section, sectionID) => {
+          const { title } = section
+          return (
+            <FormSection section={section} sectionID={sectionID} key={title} />
+          )
+        })}
         <SubmitButton />
       </form>
       <FormPreview {...formState} />

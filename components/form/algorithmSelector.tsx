@@ -23,8 +23,8 @@ export default function AlgorithmSelector() {
         className='absolute top-11 left-0 w-full invisible flex flex-col
             group-hover/algo:visible divide-y'
       >
-        {algorithms.map((algorithm) => (
-          <SelectorRow stringPayload={algorithm} />
+        {algorithms.map((algorithm, index) => (
+          <SelectorRow stringPayload={algorithm} key={index} />
         ))}
       </div>
     </div>

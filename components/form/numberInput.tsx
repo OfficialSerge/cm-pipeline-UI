@@ -14,8 +14,8 @@ function NumberInput({ field, sectionID, fieldID }: Props) {
   const { label, name, min, max, step, value, error } = field as NumberField
 
   return (
-    <div>
-      <span className='m-1'>{label}</span>
+    <div className='w-full'>
+      <span className='my-1'>{label}</span>
       <input
         className={
           error
