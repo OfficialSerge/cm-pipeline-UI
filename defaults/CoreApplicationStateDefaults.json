@@ -32,7 +32,7 @@
           "error": null
         },
         {
-          "label": "Input Directory",
+          "label": "Input Network Relative Path",
           "name": "input directory",
           "type": "string",
           "value": "",
